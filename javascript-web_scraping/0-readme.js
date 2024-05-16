@@ -1,3 +1,4 @@
+#!/usr/bin/node
 const fs = require('fs');
 
 // Provide the file path as the first argument when running the script

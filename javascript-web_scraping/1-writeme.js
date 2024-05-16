@@ -6,7 +6,7 @@ function writeStringToFile(filePath, content) {
         if (err) {
             console.error('An error occurred:', err);
         } else {
-            console.log(`Content successfully written to ${filePath}`);
+            console.log(content);
         }
     });
 }

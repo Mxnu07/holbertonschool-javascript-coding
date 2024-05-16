@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 const fs = require('fs');
 
 // Provide the file path as the first argument when running the script
@@ -19,5 +19,5 @@ fs.readFile(filePath, 'utf-8', (err, data) => {
   }
 
   // Print the file content
-  console.log('File content:', data);
+  console.log(data);
 });

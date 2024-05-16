@@ -1,20 +1,5 @@
 #!/usr/bin/node
 const fs = require('fs');
-
-function writeStringToFile(filePath, content) {
-    fs.writeFile(filePath, content, 'utf8', (err) => {
-        if (err) {
-            console.error('An error occurred:', err);
-        } else {
-            console.log(content);
-        }
-    });
-}
-
-if (process.argv.length !== 4) {
-    console.log('Usage: node script.js <file_path> <content>');
-} else {
-    const filePath = process.argv[2];
-    const content = process.argv[3];
-    writeStringToFile(filePath, content);
-}
+fs.writeFile(process.argv[2], process.argv[3], error => {
+  if (error) console.log(error);
+});

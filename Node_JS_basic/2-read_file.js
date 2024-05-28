@@ -4,8 +4,7 @@ function countStudents(path) {
   if (!fs.existsSync(path)) {
     throw Error('Cannot load the database');
   }
-  // block other parallel process
-  // and do the current file reading process
+
   const data = fs.readFileSync(path, 'utf8');
   const students = data.split('\n')
     .map((student) => student.split(','))
